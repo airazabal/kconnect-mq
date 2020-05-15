@@ -37,6 +37,24 @@
       <id>confluent</id>
       <url>http://packages.confluent.io/maven/</url>
     </repository>
+    <repository>
+      <id>eventstreams-schemas-repository</id>
+      <url>https://es-dev-ibm-es-rest-route-eventstreams.tch-cluster-0143c5dd31acd8e030a1d6e0ab1380e3-0000.us-south.containers.appdomain.cloud/files/schemas</url>
+    </repository>
+    <repository>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>central</id>
+      <name>libs-release</name>
+      <url>https://artifactory-tools.tch-cluster-0143c5dd31acd8e030a1d6e0ab1380e3-0000.us-south.containers.appdomain.cloud/artifactory/libs-release</url>
+    </repository>
+    <repository>
+      <snapshots />
+      <id>snapshots</id>
+      <name>libs-snapshot</name>
+      <url>https://artifactory-tools.tch-cluster-0143c5dd31acd8e030a1d6e0ab1380e3-0000.us-south.containers.appdomain.cloud/artifactory/libs-snapshot</url>
+    </repository>
   </repositories>
   <build>
     <plugins>
