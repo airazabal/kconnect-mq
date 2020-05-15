@@ -1,0 +1,15 @@
+{
+"name": "jdbc-sink-connector",
+"config": {
+"connector.class": "com.ibm.eventstreams.connect.jdbcsink.JDBCSinkConnector",
+"table.name.format": "PACS008_CLEANSED_RTP_SCHEMA.CLEAN_RTP_REJECT",
+"connection.password": "ODA1ZTZlMGRjMzhi",
+"tasks.max": "10",
+"topics": "CLEAN-RTP-SUCCESS",
+"connection.user": "bluadmin",
+"name": "jdbc-sink-connector",
+"connection.url":"jdbc:db2://dashdb-txn-flex-yp-dal13-77.services.dal.bluemix.net:50001/BLUDB:sslConnection=true;",
+"insert.mode.databaselevel": "true",
+"connection.ds.pool.size": "10"
+}
+}

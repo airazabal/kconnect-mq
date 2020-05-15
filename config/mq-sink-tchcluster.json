@@ -1,0 +1,18 @@
+{
+    "name": "mq-sink",
+    "config":
+    {
+        "connector.class": "com.ibm.eventstreams.connect.mqsink.MQSinkConnector",
+        "tasks.max": "1",
+        "topics": "accounts",
+
+        "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+        "value.converter": "org.apache.kafka.connect.storage.StringConverter",
+
+        "mq.queue.manager": "tchqmgr",
+        "mq.connection.name.list": "172.21.210.166",
+        "mq.channel.name": "kafka.to.mq",
+        "mq.queue": "zelle",
+        "mq.message.builder": "com.ibm.eventstreams.connect.mqsink.builders.DefaultMessageBuilder"
+    }
+}

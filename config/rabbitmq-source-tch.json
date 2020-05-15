@@ -1,0 +1,15 @@
+{
+    "name": "RabbitMQSourceConnector",
+    "config": {
+        "connector.class": "com.ibm.eventstreams.connect.rabbitmqsource.RabbitMQSourceConnector",
+        "tasks.max": "2",
+        "bootstrap.servers": "tch-kafka-dev-ibm-es-kafka-headless-svc:9092",
+        "kafka.topic" : "accounts",
+        "rabbitmq.queue" : "accounts",
+        "rabbitmq.host" : "rabbitmq",
+        "rabbitmq.prefetch.count" : "500",
+        "rabbitmq.automatic.recovery.enabled" : "true",
+        "rabbitmq.network.recovery.interval.ms" : "10000",
+        "rabbitmq.topology.recovery.enabled" : "true"
+    }
+}
