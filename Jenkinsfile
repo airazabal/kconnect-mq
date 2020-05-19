@@ -283,12 +283,14 @@ spec:
                     echo CONTEXT=${CONTEXT}
 
                     APP_IMAGE="${REGISTRY_URL}/${REGISTRY_NAMESPACE}/${IMAGE_NAME}:${IMAGE_VERSION}"
+                    APP_IMAGE_LATEST="${REGISTRY_URL}/${REGISTRY_NAMESPACE}/${IMAGE_NAME}:latest"
 
                     buildah bud --tls-verify=${TLSVERIFY} --format=docker -f ${DOCKERFILE} -t ${APP_IMAGE} ${CONTEXT}
                     if [[ -n "${REGISTRY_USER}" ]] && [[ -n "${REGISTRY_PASSWORD}" ]]; then
                         buildah login -u "${REGISTRY_USER}" -p "${REGISTRY_PASSWORD}" "${REGISTRY_URL}"
                     fi
                     buildah push --tls-verify=${TLSVERIFY} "${APP_IMAGE}" "docker://${APP_IMAGE}"
+                    buildah push --tls-verify=${TLSVERIFY} "${APP_IMAGE}" "docker://${APP_IMAGE_LATEST}"
                 '''
             }
         }
@@ -331,6 +333,7 @@ spec:
                     # Using 'upgrade --install" for rolling updates. Note that subsequent updates will occur in the same namespace the release is currently deployed in, ignoring the explicit--namespace argument".
                     helm template ${CHART_PATH} \
                         --name ${RELEASE_NAME} \
+                        --set image.repository=$IMAGE_REPOSITORY \
                         --namespace ${ENVIRONMENT_NAME} > ./release.yaml
 
                     echo -e "Generated release yaml for: ${CLUSTER_NAME}/${ENVIRONMENT_NAME}."
