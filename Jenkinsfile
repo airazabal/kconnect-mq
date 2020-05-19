@@ -118,9 +118,9 @@ spec:
         - name: TLSVERIFY
           value: "false"
         - name: REGISTRY_URL
-          value: default-route-openshift-image-registry.tch-cluster-0143c5dd31acd8e030a1d6e0ab1380e3-0000.us-south.containers.appdomain.cloud
+          value: image-registry.openshift-image-registry.svc:5000
         - name: REGISTRY_NAMESPACE
-          value: rabbitmq
+          value: ${env.NAMESPACE}
         - name: REGISTRY_USER
           valueFrom:
             secretKeyRef:
