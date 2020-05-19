@@ -121,6 +121,18 @@ spec:
           value: default-route-openshift-image-registry.tch-cluster-0143c5dd31acd8e030a1d6e0ab1380e3-0000.us-south.containers.appdomain.cloud
         - name: REGISTRY_NAMESPACE
           value: rabbitmq
+        - name: REGISTRY_USER
+          valueFrom:
+            secretKeyRef:
+              key: REGISTRY_USER
+              name: registry-creds
+              optional: true
+        - name: REGISTRY_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              key: REGISTRY_PASSWORD
+              name: registry-creds
+              optional: true
       volumeMounts:
         - mountPath: /var/lib/containers
           name: varlibcontainers
