@@ -118,17 +118,9 @@ spec:
         - name: TLSVERIFY
           value: "false"
         - name: REGISTRY_URL
-          valueFrom:
-            secretKeyRef:
-              key: REGISTRY_URL
-              name: ibmcloud-config
-              optional: true
+          value: default-route-openshift-image-registry.tch-cluster-0143c5dd31acd8e030a1d6e0ab1380e3-0000.us-south.containers.appdomain.cloud
         - name: REGISTRY_NAMESPACE
-          valueFrom:
-            secretKeyRef:
-              key: REGISTRY_NAMESPACE
-              name: ibmcloud-config
-              optional: true
+          value: rabbitmq
         - name: REGISTRY_USER
           valueFrom:
             secretKeyRef:
