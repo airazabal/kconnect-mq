@@ -27,7 +27,6 @@ spec:
             - name: {{ .Values.ports.name }}
               containerPort: {{ .Values.ports.port }}
               protocol: TCP
-                    resources: {}
           volumeMounts:
             - name: {{ .Values.volumeMounts.name }}
               mountPath: {{ .Values.volumeMounts.mountPath }}
@@ -59,17 +58,3 @@ spec:
       maxSurge: 25%
   revisionHistoryLimit: 10
   progressDeadlineSeconds: 600
-          resources:
-{{ toYaml .Values.resources | indent 12 }}
-    {{- with .Values.nodeSelector }}
-      nodeSelector:
-{{ toYaml . | indent 8 }}
-    {{- end }}
-    {{- with .Values.affinity }}
-      affinity:
-{{ toYaml . | indent 8 }}
-    {{- end }}
-    {{- with .Values.tolerations }}
-      tolerations:
-{{ toYaml . | indent 8 }}
-    {{- end }}
