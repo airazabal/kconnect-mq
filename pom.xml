@@ -23,12 +23,24 @@
       <artifactId>kafka-connect-jdbc-sink</artifactId>
       <version>0.0.1-20200515.162600-3</version>
       <classifier>jar-with-dependencies</classifier>
+      <exclusions>
+        <exclusion>
+          <groupId>*</groupId>
+          <artifactId>*</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>com.ibm.eventstreams.connect</groupId>
       <artifactId>kafka-connect-avro-converter</artifactId>
       <version>1.0-20200513.182234-1</version>
       <classifier>jar-with-dependencies</classifier>
+      <exclusions>
+        <exclusion>
+          <groupId>*</groupId>
+          <artifactId>*</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
 
   </dependencies>
