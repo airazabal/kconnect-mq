@@ -21,7 +21,7 @@
     <dependency>
       <groupId>com.ibm.eventstreams.connect</groupId>
       <artifactId>kafka-connect-jdbc-sink</artifactId>
-      <version>0.0.1-20200515.162600-3</version>
+      <version>0.0.1</version>
       <classifier>jar-with-dependencies</classifier>
       <exclusions>
         <exclusion>
@@ -33,7 +33,7 @@
     <dependency>
       <groupId>com.ibm.eventstreams.connect</groupId>
       <artifactId>kafka-connect-avro-converter</artifactId>
-      <version>1.0-20200513.182234-1</version>
+      <version>1.0.0</version>
       <classifier>jar-with-dependencies</classifier>
       <exclusions>
         <exclusion>
@@ -50,26 +50,25 @@
       <url>http://packages.confluent.io/maven/</url>
     </repository>
     <repository>
-      <id>eventstreams-schemas-repository</id>
-      <url>https://es-dev-ibm-es-rest-route-eventstreams.tch-cluster-0143c5dd31acd8e030a1d6e0ab1380e3-0000.us-south.containers.appdomain.cloud/files/schemas</url>
+      <id>kafka-connect-jdbc-sink-github</id>
+      <url>https://maven.pkg.github.com/seansund/kafka-connect-jdbc-sink</url>
+      <releases><enabled>true</enabled></releases>
+      <snapshots><enabled>true</enabled></snapshots>
     </repository>
     <repository>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-      <id>central</id>
-      <name>libs-release</name>
-      <url>https://artifactory-tools.tch-cluster-0143c5dd31acd8e030a1d6e0ab1380e3-0000.us-south.containers.appdomain.cloud/artifactory/libs-release</url>
-    </repository>
-    <repository>
-      <snapshots />
-      <id>snapshots</id>
-      <name>libs-snapshot</name>
-      <url>https://artifactory-tools.tch-cluster-0143c5dd31acd8e030a1d6e0ab1380e3-0000.us-south.containers.appdomain.cloud/artifactory/libs-snapshot</url>
+      <id>kafka-connect-avro-converter-github</id>
+      <url>https://maven.pkg.github.com/seansund/kafka-connect-avro-converter</url>
+      <releases><enabled>true</enabled></releases>
+      <snapshots><enabled>true</enabled></snapshots>
     </repository>
   </repositories>
   <build>
     <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
+      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-dependency-plugin</artifactId>
