@@ -32,13 +32,10 @@ spec:
               mountPath: {{ .Values.volumeMounts.mountPath }}
               subPath: {{ .Values.volumeMounts.subPath }}
               readOnly: true
-      volumes:
-        - name: connector-config
-          configMap:
-            name: connector-config
-        - name: {{ .Values.volumeMounts.name }}
-          secret:
-            secretName: {{ .Values.volumes.secretName }}
+            - name: connector-config
+              mountPath: /opt/kafka/config
+              subPath: connect-distributed.properties
+              readOnly: true
           terminationMessagePath: /dev/termination-log
           terminationMessagePolicy: File
           livenessProbe:
@@ -54,6 +51,13 @@ spec:
       dnsPolicy: ClusterFirst
       securityContext: {}
       schedulerName: default-scheduler
+      volumes:
+        - name: connector-config
+          configMap:
+            name: connector-config
+        - name: {{ .Values.volumeMounts.name }}
+          secret:
+            secretName: {{ .Values.volumes.secretName }}
   strategy:
     type: RollingUpdate
     rollingUpdate:

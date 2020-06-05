@@ -66,7 +66,7 @@ connectDistributedProperties: |-
     # (the "License"); you may not use this file except in compliance with
     # the License.  You may obtain a copy of the License at
     #
-    #    http://www.apache.org/licenses/LICENSE-2.0
+    #    http://www.apache.org/licenses/LICENSE-2.0ç
     #
     # Unless required by applicable law or agreed to in writing, software
     # distributed under the License is distributed on an "AS IS" BASIS,
@@ -81,8 +81,6 @@ connectDistributedProperties: |-
 
     # A list of host/port pairs to use for establishing the initial connection to the Kafka cluster.
     # tch-kafka-dev-ibm-es-proxy-svc:30000
-    #bootstrap.servers=tch-kafka-dev-ibm-es-proxy-route-bootstrap-eventstreams.tchcluster-cp4i-0143c5dd31acd8e030a1d6e0ab1380e3-0000.us-south.containers.appdomain.cloud:443
-    #bootstrap.servers=es-dev-ibm-es-proxy-svc.eventstreams:31555
     bootstrap.servers=es-dev-ibm-es-proxy-route-bootstrap-eventstreams.tch-cluster-0143c5dd31acd8e030a1d6e0ab1380e3-0000.us-south.containers.appdomain.cloud:443
     # bootstrap.servers=eventstream140-ibm-es-proxy-route-broker-0-eventstreams.apps.green.ocp.csplab.local:443
     security.protocol=SASL_SSL
@@ -123,7 +121,6 @@ connectDistributedProperties: |-
     # to run this example on a single-broker cluster and so here we instead set the replication factor to 1.
     offset.storage.topic=connect-offsets-jdbc1
     offset.storage.replication.factor=25
-    #offset.storage.partitions=25
 
     # Topic to use for storing connector and task configurations; note that this should be a single partition, highly replicated,
     # and compacted topic. Kafka Connect will attempt to create the topic automatically when needed, but you can always manually create
@@ -142,7 +139,6 @@ connectDistributedProperties: |-
     # to run this example on a single-broker cluster and so here we instead set the replication factor to 1.
     status.storage.topic=connect-status-jdbc1
     status.storage.replication.factor=5
-    #status.storage.partitions=5
 
     # Flush much faster than normal, which is useful for testing/debugging
     offset.flush.interval.ms=10000
