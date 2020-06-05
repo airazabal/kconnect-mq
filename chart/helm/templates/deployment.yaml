@@ -33,6 +33,9 @@ spec:
               subPath: {{ .Values.volumeMounts.subPath }}
               readOnly: true
       volumes:
+        - name: connector-config
+          configMap:
+            name: connector-config
         - name: {{ .Values.volumeMounts.name }}
           secret:
             secretName: {{ .Values.volumes.secretName }}
