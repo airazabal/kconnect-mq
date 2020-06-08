@@ -69,6 +69,16 @@ spec:
           value: ${workingDir}
         - name: SONAR_USER_HOME
           value: ${workingDir}
+        - name: GIT_USER
+          valueFrom:
+            secretKeyRef:
+              name: git-credentials
+              key: username
+        - name: GIT_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: git-credentials
+              key: password
     - name: node
       image: node:12-stretch
       tty: true
@@ -202,14 +212,20 @@ spec:
         - secretRef:
             name: git-credentials
             optional: true
+
 """
 ) {
     node(buildLabel) {
         container(name: 'jdk11', shell: '/bin/bash') {
             checkout scm
+            stage('setup') {
+                sh '''
+                   sed -i "" -e "s/GIT_USER/$GIT_USER/g" -e "s/GIT_TOKEN/$GIT_TOKEN/g" settings.xml
+                '''
+            }
             stage('Build') {
                 sh '''
-                    mvn package
+                    mvn package -s settings.xml
                 '''
             }
         }
