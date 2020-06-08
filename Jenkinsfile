@@ -213,7 +213,7 @@ spec:
                     sh '''
                        ls -l
                        cat settings.xml
-                       sed -i "" -e "s/GIT_USER/$GIT_AUTH_USER/g" -e "s/GIT_TOKEN/$GIT_AUTH_PWD/g" ./settings.xml
+                       sed -i '' -e "s/GIT_USER/$GIT_AUTH_USER/g" -e "s/GIT_TOKEN/$GIT_AUTH_PWD/g" ./settings.xml
                     '''
                 }
         }
