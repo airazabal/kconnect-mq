@@ -126,13 +126,13 @@ spec:
           valueFrom:
             secretKeyRef:
               key: REGISTRY_USER
-              name: ibmcloud-apikey
+              name: ibmcloud-apikey1
               optional: true
         - name: REGISTRY_PASSWORD
           valueFrom:
             secretKeyRef:
               key: REGISTRY_PASSWORD
-              name: ibmcloud-apikey
+              name: ibmcloud-apikey1
               optional: true
       volumeMounts:
         - mountPath: /var/lib/containers
@@ -299,7 +299,6 @@ spec:
 
                     buildah bud --tls-verify=${TLSVERIFY} --format=docker -f ${DOCKERFILE} -t ${APP_IMAGE} ${CONTEXT}
                     if [[ -n "${REGISTRY_USER}" ]] && [[ -n "${REGISTRY_PASSWORD}" ]]; then
-                        echo "logging into registry user:${REGISTRY_USER}, pwd: ${REGISTRY_PASSWORD} "
                         buildah login --tls-verify=${TLSVERIFY} -u "${REGISTRY_USER}" -p "${REGISTRY_PASSWORD}" "${REGISTRY_URL}"
                     fi
                     buildah push --tls-verify=${TLSVERIFY} "${APP_IMAGE}" "docker://${APP_IMAGE}"
