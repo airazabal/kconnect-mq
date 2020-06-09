@@ -126,13 +126,13 @@ spec:
           valueFrom:
             secretKeyRef:
               key: REGISTRY_USER
-              name: registry-creds
+              name: ibmcloud-apikey
               optional: true
         - name: REGISTRY_PASSWORD
           valueFrom:
             secretKeyRef:
               key: REGISTRY_PASSWORD
-              name: registry-creds
+              name: ibmcloud-apikey
               optional: true
       volumeMounts:
         - mountPath: /var/lib/containers
