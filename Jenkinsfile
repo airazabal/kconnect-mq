@@ -244,7 +244,7 @@ spec:
                     COMMIT_HASH=$(git rev-parse HEAD)
                     git checkout -b ${BRANCH} --track origin/${BRANCH}
                     git branch --set-upstream-to=origin/${BRANCH} ${BRANCH}
-                    git reset --hard ${COMMIT_HASH}
+                    git reset ${COMMIT_HASH}
 
                     git config --global user.name "Jenkins Pipeline"
                     git config --global user.email "jenkins@ibmcloud.com"
