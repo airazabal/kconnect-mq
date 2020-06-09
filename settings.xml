@@ -5,13 +5,13 @@
   <servers>
     <server>
       <id>kafka-connect-jdbc-sink-github</id>
-      <username>GIT_USER</username>
-      <password>GIT_TOKEN</password>
+      <username>airazabal</username>
+      <password>5004f385b8976e286ce3d01401f2076d8b7cc369</password>
     </server>
     <server>
       <id>kafka-connect-avro-converter-github</id>
-      <username>GIT_USER</username>
-      <password>GIT_TOKEN</password>
+      <username>airazabal</username>
+      <password>5004f385b8976e286ce3d01401f2076d8b7cc369</password>
     </server>
   </servers>
 </settings>
