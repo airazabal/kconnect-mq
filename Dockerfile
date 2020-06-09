@@ -2,6 +2,7 @@
 FROM ibmjava:8-jre as builder
 
 COPY . .
+RUN cat settings.xml
 RUN ./mvnw package -s ./settings.xml
 
 FROM strimzi/kafka:latest-kafka-2.5.0
