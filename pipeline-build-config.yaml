@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: BuildConfig
+metadata:
+  name: airazabal.kafka-connect-jdbc-sink
+  labels:
+    app: kafka-connect-jdbc-sink
+spec:
+  triggers:
+    - type: GitHub
+      github:
+        secret: secret101
+  source:
+    git:
+      uri: 'https://github.com/airazabal/kafka-connect-jdbc-sink.git'
+      ref: master
+  strategy:
+    jenkinsPipelineStrategy:
+      jenkinsfilePath: Jenkinsfile
+      env:
+        - name: CLOUD_NAME
+          value: openshift
+        - name: NAMESPACE
+          value: rabbitmq
+        - name: BRANCH
+          value: master
