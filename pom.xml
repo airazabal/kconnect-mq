@@ -33,7 +33,7 @@
     <dependency>
       <groupId>com.ibm.eventstreams.connect</groupId>
       <artifactId>kafka-connect-avro-converter</artifactId>
-      <version>1.0.0</version>
+      <version>1.0.1</version>
       <classifier>jar-with-dependencies</classifier>
       <exclusions>
         <exclusion>
