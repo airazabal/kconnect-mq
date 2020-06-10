@@ -182,8 +182,8 @@ spec:
               name: ibmcloud-config
               key: CLUSTER_TYPE
               optional: true
-        - name: REGISTRY_URL
-          value: default-route-openshift-image-registry.tch-cluster-0143c5dd31acd8e030a1d6e0ab1380e3-0000.us-south.containers.appdomain.cloud
+  #      - name: REGISTRY_URL
+  #        value: default-route-openshift-image-registry.tch-cluster-0143c5dd31acd8e030a1d6e0ab1380e3-0000.us-south.containers.appdomain.cloud
 
 
         - name: REGISTRY_NAMESPACE
