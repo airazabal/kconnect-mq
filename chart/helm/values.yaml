@@ -87,19 +87,19 @@ connectDistributedProperties: |-
     ssl.truststore.location=/opt/kafka/es-cert.jks
     ssl.truststore.password=password
     sasl.mechanism=PLAIN
-    sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username="token" password="GV7TU_KQqj0FfJ0AvK3VpaDJ71fQ_UjMsYqGs2zG2fps";
+    sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username="token" password="40ZcIcdfWlJ003jQKXDka16RaJGjLHrbSL9lubjQWfB3";
     producer.security.protocol=SASL_SSL
     producer.ssl.protocol=TLSv1.2
     producer.ssl.truststore.location=/opt/kafka/es-cert.jks
     producer.ssl.truststore.password=password
     producer.sasl.mechanism=PLAIN
-    producer.sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username="token" password="GV7TU_KQqj0FfJ0AvK3VpaDJ71fQ_UjMsYqGs2zG2fps";
+    producer.sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username="token" password="40ZcIcdfWlJ003jQKXDka16RaJGjLHrbSL9lubjQWfB3";
     consumer.security.protocol=SASL_SSL
     consumer.ssl.protocol=TLSv1.2
     consumer.ssl.truststore.location=/opt/kafka/es-cert.jks
     consumer.ssl.truststore.password=password
     consumer.sasl.mechanism=PLAIN
-    consumer.sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username="token" password="GV7TU_KQqj0FfJ0AvK3VpaDJ71fQ_UjMsYqGs2zG2fps";
+    consumer.sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username="token" password="40ZcIcdfWlJ003jQKXDka16RaJGjLHrbSL9lubjQWfB3";
     # unique name for the cluster, used in forming the Connect cluster group. Note that this must not conflict with consumer group IDs
     group.id=jdbc1-source-connect-cluster
 
@@ -166,7 +166,7 @@ connectDistributedProperties: |-
     key.converter.schema.registry.ssl.truststore.location=/opt/kafka/es-cert.jks
     key.converter.schema.registry.ssl.truststore.password=password
     key.converter.schema.registry.sasl.jaas.username=token
-    key.converter.schema.registry.sasl.jaas.password=GV7TU_KQqj0FfJ0AvK3VpaDJ71fQ_UjMsYqGs2zG2fps
+    key.converter.schema.registry.sasl.jaas.password=40ZcIcdfWlJ003jQKXDka16RaJGjLHrbSL9lubjQWfB3
     key.converter.schema.registry.property.api.url=https://es-cp4i-ibm-es-rest-route-eventstreams-cp4i.gse-eda-demo-202005-fa9ee67c9ab6a7791435450358e564cc-0000.us-south.containers.appdomain.cloud
     key.converter.schema.registry.property.api.skip_ssl_validation=true
     value.converter.schema.registry.bootstrap.server=es-cp4i-ibm-es-proxy-route-bootstrap-eventstreams-cp4i.gse-eda-demo-202005-fa9ee67c9ab6a7791435450358e564cc-0000.us-south.containers.appdomain.cloud:443
@@ -175,7 +175,7 @@ connectDistributedProperties: |-
     value.converter.schema.registry.ssl.truststore.location=/opt/kafka/es-cert.jks
     value.converter.schema.registry.ssl.truststore.password=password
     value.converter.schema.registry.sasl.jaas.username=token
-    value.converter.schema.registry.sasl.jaas.password=GV7TU_KQqj0FfJ0AvK3VpaDJ71fQ_UjMsYqGs2zG2fps
+    value.converter.schema.registry.sasl.jaas.password=40ZcIcdfWlJ003jQKXDka16RaJGjLHrbSL9lubjQWfB3
     value.converter.schema.registry.property.api.url=https://es-cp4i-ibm-es-rest-route-eventstreams-cp4i.gse-eda-demo-202005-fa9ee67c9ab6a7791435450358e564cc-0000.us-south.containers.appdomain.cloud
     value.converter.schema.registry.property.api.skip_ssl_validation=true
     schema.registry.bootstrap.server=es-cp4i-ibm-es-proxy-route-bootstrap-eventstreams-cp4i.gse-eda-demo-202005-fa9ee67c9ab6a7791435450358e564cc-0000.us-south.containers.appdomain.cloud:443
@@ -184,7 +184,7 @@ connectDistributedProperties: |-
     schema.registry.ssl.truststore.location=/opt/kafka/es-cert.jks
     schema.registry.ssl.truststore.password=password
     schema.registry.sasl.jaas.username=token
-    schema.registry.sasl.jaas.password=GV7TU_KQqj0FfJ0AvK3VpaDJ71fQ_UjMsYqGs2zG2fps
+    schema.registry.sasl.jaas.password=40ZcIcdfWlJ003jQKXDka16RaJGjLHrbSL9lubjQWfB3
     schema.registry.property.api.url=https://es-cp4i-ibm-es-rest-route-eventstreams-cp4i.gse-eda-demo-202005-fa9ee67c9ab6a7791435450358e564cc-0000.us-south.containers.appdomain.cloud
     schema.registry.property.api.skip_ssl_validation=true
     schema.registry.sasl.mechanism=PLAIN
