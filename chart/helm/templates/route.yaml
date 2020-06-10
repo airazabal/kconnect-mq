@@ -1,0 +1,1 @@
+apiVersion: route.openshift.io/v1kind: Routemetadata:  name: {{ template "rmq-connector.fullname" . }}  namespace: {{ .Values.service.metadata.namespace }}spec:  port:    targetPort: tcp  to:    kind: Service    name: {{ template "rmq-connector.fullname" . }}    weight: 100  wildcardPolicy: None
