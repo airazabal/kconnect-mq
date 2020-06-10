@@ -33,7 +33,7 @@ spec:
               subPath: {{ .Values.volumeMounts.subPath }}
               readOnly: true
             - name: connector-config
-              mountPath: /opt/kafka/config
+              mountPath: /opt/kafka/config/connect-distributed.properties
               subPath: connect-distributed.properties
               readOnly: true
           terminationMessagePath: /dev/termination-log

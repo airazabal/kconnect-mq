@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: image-registry.openshift-image-registry.svc:5000/rabbitmq/kconnect
+  repository: image-registry.openshift-image-registry.svc:5000/rabbitmq/kafka-connect-jdbc-sink
   tag: latest
   pullPolicy: Always
 
@@ -81,8 +81,7 @@ connectDistributedProperties: |-
 
     # A list of host/port pairs to use for establishing the initial connection to the Kafka cluster.
     # tch-kafka-dev-ibm-es-proxy-svc:30000
-    bootstrap.servers=es-dev-ibm-es-proxy-route-bootstrap-eventstreams.tch-cluster-0143c5dd31acd8e030a1d6e0ab1380e3-0000.us-south.containers.appdomain.cloud:443
-    # bootstrap.servers=eventstream140-ibm-es-proxy-route-broker-0-eventstreams.apps.green.ocp.csplab.local:443
+    bootstrap.servers=es-cp4i-ibm-es-proxy-route-bootstrap-eventstreams-cp4i.gse-eda-demo-202005-fa9ee67c9ab6a7791435450358e564cc-0000.us-south.containers.appdomain.cloud:443
     security.protocol=SASL_SSL
     ssl.protocol=TLSv1.2
     ssl.truststore.location=/opt/kafka/es-cert.jks
@@ -161,38 +160,31 @@ connectDistributedProperties: |-
     plugin.path=/opt/connectors
 
     #avro stuff
-    #key.converter.schema.registry.bootstrap.server=tch-kafka-dev-ibm-es-proxy-route-bootstrap-eventstreams.tchcluster-cp4i-0143c5dd31acd8e030a1d6e0ab1380e3-0000.us-south.containers.appdomain.cloud:443
-    #key.converter.schema.registry.bootstrap.server=es-dev-ibm-es-proxy-svc.eventstreams:31555
-    key.converter.schema.registry.bootstrap.server=es-dev-ibm-es-proxy-route-bootstrap-eventstreams.tch-cluster-0143c5dd31acd8e030a1d6e0ab1380e3-0000.us-south.containers.appdomain.cloud:443
+    key.converter.schema.registry.bootstrap.server=es-cp4i-ibm-es-proxy-route-bootstrap-eventstreams-cp4i.gse-eda-demo-202005-fa9ee67c9ab6a7791435450358e564cc-0000.us-south.containers.appdomain.cloud:443
     key.converter.schema.registry.security.protocol=SASL_SSL
     key.converter.schema.registry.ssl.protocol=TLSv1.2
     key.converter.schema.registry.ssl.truststore.location=/opt/kafka/es-cert.jks
     key.converter.schema.registry.ssl.truststore.password=password
     key.converter.schema.registry.sasl.jaas.username=token
     key.converter.schema.registry.sasl.jaas.password=GV7TU_KQqj0FfJ0AvK3VpaDJ71fQ_UjMsYqGs2zG2fps
-    #key.converter.schema.registry.property.api.url=https://tch-kafka-dev-ibm-es-rest-route-eventstreams.tchcluster-cp4i-0143c5dd31acd8e030a1d6e0ab1380e3-0000.us-south.containers.appdomain.cloud
-    key.converter.schema.registry.property.api.url=https://es-dev-ibm-es-rest-route-eventstreams.tch-cluster-0143c5dd31acd8e030a1d6e0ab1380e3-0000.us-south.containers.appdomain.cloud
+    key.converter.schema.registry.property.api.url=https://es-cp4i-ibm-es-rest-route-eventstreams-cp4i.gse-eda-demo-202005-fa9ee67c9ab6a7791435450358e564cc-0000.us-south.containers.appdomain.cloud
     key.converter.schema.registry.property.api.skip_ssl_validation=true
-    #value.converter.schema.registry.bootstrap.server=tch-kafka-dev-ibm-es-proxy-route-bootstrap-eventstreams.tchcluster-cp4i-0143c5dd31acd8e030a1d6e0ab1380e3-0000.us-south.containers.appdomain.cloud:443
-    value.converter.schema.registry.bootstrap.server=es-dev-ibm-es-proxy-route-bootstrap-eventstreams.tch-cluster-0143c5dd31acd8e030a1d6e0ab1380e3-0000.us-south.containers.appdomain.cloud:443
+    value.converter.schema.registry.bootstrap.server=es-cp4i-ibm-es-proxy-route-bootstrap-eventstreams-cp4i.gse-eda-demo-202005-fa9ee67c9ab6a7791435450358e564cc-0000.us-south.containers.appdomain.cloud:443
     value.converter.schema.registry.security.protocol=SASL_SSL
     value.converter.schema.registry.ssl.protocol=TLSv1.2
     value.converter.schema.registry.ssl.truststore.location=/opt/kafka/es-cert.jks
     value.converter.schema.registry.ssl.truststore.password=password
     value.converter.schema.registry.sasl.jaas.username=token
     value.converter.schema.registry.sasl.jaas.password=GV7TU_KQqj0FfJ0AvK3VpaDJ71fQ_UjMsYqGs2zG2fps
-    #value.converter.schema.registry.property.api.url=https://tch-kafka-dev-ibm-es-rest-route-eventstreams.tchcluster-cp4i-0143c5dd31acd8e030a1d6e0ab1380e3-0000.us-south.containers.appdomain.cloud
-    value.converter.schema.registry.property.api.url=https://es-dev-ibm-es-rest-route-eventstreams.tch-cluster-0143c5dd31acd8e030a1d6e0ab1380e3-0000.us-south.containers.appdomain.cloud
+    value.converter.schema.registry.property.api.url=https://es-cp4i-ibm-es-rest-route-eventstreams-cp4i.gse-eda-demo-202005-fa9ee67c9ab6a7791435450358e564cc-0000.us-south.containers.appdomain.cloud
     value.converter.schema.registry.property.api.skip_ssl_validation=true
-    schema.registry.bootstrap.server=es-dev-ibm-es-proxy-route-bootstrap-eventstreams.tch-cluster-0143c5dd31acd8e030a1d6e0ab1380e3-0000.us-south.containers.appdomain.cloud:443
-    #schema.registry.bootstrap.server=es-dev-ibm-es-proxy-svc.eventstreams:31555
+    schema.registry.bootstrap.server=es-cp4i-ibm-es-proxy-route-bootstrap-eventstreams-cp4i.gse-eda-demo-202005-fa9ee67c9ab6a7791435450358e564cc-0000.us-south.containers.appdomain.cloud:443
     schema.registry.security.protocol=SASL_SSL
     schema.registry.ssl.protocol=TLSv1.2
     schema.registry.ssl.truststore.location=/opt/kafka/es-cert.jks
     schema.registry.ssl.truststore.password=password
     schema.registry.sasl.jaas.username=token
     schema.registry.sasl.jaas.password=GV7TU_KQqj0FfJ0AvK3VpaDJ71fQ_UjMsYqGs2zG2fps
-    #schema.registry.property.api.url=https://tch-kafka-dev-ibm-es-rest-route-eventstreams.tchcluster-cp4i-0143c5dd31acd8e030a1d6e0ab1380e3-0000.us-south.containers.appdomain.cloud
-    schema.registry.property.api.url=https://es-dev-ibm-es-rest-route-eventstreams.tch-cluster-0143c5dd31acd8e030a1d6e0ab1380e3-0000.us-south.containers.appdomain.cloud
+    schema.registry.property.api.url=https://es-cp4i-ibm-es-rest-route-eventstreams-cp4i.gse-eda-demo-202005-fa9ee67c9ab6a7791435450358e564cc-0000.us-south.containers.appdomain.cloud
     schema.registry.property.api.skip_ssl_validation=true
     schema.registry.sasl.mechanism=PLAIN
