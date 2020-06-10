@@ -118,8 +118,8 @@ connectDistributedProperties: |-
     # Most users will want to use the built-in default replication factor of 3 or in some cases even specify a larger value.
     # Since this means there must be at least as many brokers as the maximum replication factor used, we'd like to be able
     # to run this example on a single-broker cluster and so here we instead set the replication factor to 1.
-    offset.storage.topic=connect-offsets-jdbc1
-    offset.storage.replication.factor=25
+    offset.storage.topic=connect-offsets-jdbc-4
+    offset.storage.replication.factor=1
 
     # Topic to use for storing connector and task configurations; note that this should be a single partition, highly replicated,
     # and compacted topic. Kafka Connect will attempt to create the topic automatically when needed, but you can always manually create
@@ -127,7 +127,7 @@ connectDistributedProperties: |-
     # Most users will want to use the built-in default replication factor of 3 or in some cases even specify a larger value.
     # Since this means there must be at least as many brokers as the maximum replication factor used, we'd like to be able
     # to run this example on a single-broker cluster and so here we instead set the replication factor to 1.
-    config.storage.topic=connect-configs-jdbc1
+    config.storage.topic=connect-configs-jdbc-4
     config.storage.replication.factor=1
 
     # Topic to use for storing statuses. This topic can have multiple partitions and should be replicated and compacted.
@@ -136,8 +136,8 @@ connectDistributedProperties: |-
     # Most users will want to use the built-in default replication factor of 3 or in some cases even specify a larger value.
     # Since this means there must be at least as many brokers as the maximum replication factor used, we'd like to be able
     # to run this example on a single-broker cluster and so here we instead set the replication factor to 1.
-    status.storage.topic=connect-status-jdbc1
-    status.storage.replication.factor=5
+    status.storage.topic=connect-status-jdbc-4
+    status.storage.replication.factor=1
 
     # Flush much faster than normal, which is useful for testing/debugging
     offset.flush.interval.ms=10000
