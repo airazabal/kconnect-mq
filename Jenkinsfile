@@ -183,7 +183,7 @@ spec:
               key: CLUSTER_TYPE
               optional: true
         - name: REGISTRY_URL
-          value: default-route-openshift-image-registry.gse-eda-demo-202005-fa9ee67c9ab6a7791435450358e564cc-0000.us-south.containers.appdomain.cloud
+          value: image-registry.openshift-image-registry.svc:5000
 
 
         - name: REGISTRY_NAMESPACE
