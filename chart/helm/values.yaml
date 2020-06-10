@@ -166,7 +166,7 @@ connectDistributedProperties: |-
     key.converter.schema.registry.ssl.truststore.location=/opt/kafka/es-cert.jks
     key.converter.schema.registry.ssl.truststore.password=password
     key.converter.schema.registry.sasl.jaas.username=token
-    key.converter.schema.registry.sasl.jaas.password=40ZcIcdfWlJ003jQKXDka16RaJGjLHrbSL9lubjQWfB3
+    key.converter.schema.registry.sasl.jaas.password=vwKjy9ABs6oCLhZ71riACyKXYzcuXSjyRF0W1UkEtyCp
     key.converter.schema.registry.property.api.url=https://es-cp4i-ibm-es-rest-route-eventstreams-cp4i.gse-eda-demo-202005-fa9ee67c9ab6a7791435450358e564cc-0000.us-south.containers.appdomain.cloud
     key.converter.schema.registry.property.api.skip_ssl_validation=true
     value.converter.schema.registry.bootstrap.server=es-cp4i-ibm-es-proxy-route-bootstrap-eventstreams-cp4i.gse-eda-demo-202005-fa9ee67c9ab6a7791435450358e564cc-0000.us-south.containers.appdomain.cloud:443
@@ -175,7 +175,7 @@ connectDistributedProperties: |-
     value.converter.schema.registry.ssl.truststore.location=/opt/kafka/es-cert.jks
     value.converter.schema.registry.ssl.truststore.password=password
     value.converter.schema.registry.sasl.jaas.username=token
-    value.converter.schema.registry.sasl.jaas.password=40ZcIcdfWlJ003jQKXDka16RaJGjLHrbSL9lubjQWfB3
+    value.converter.schema.registry.sasl.jaas.password=vwKjy9ABs6oCLhZ71riACyKXYzcuXSjyRF0W1UkEtyCp
     value.converter.schema.registry.property.api.url=https://es-cp4i-ibm-es-rest-route-eventstreams-cp4i.gse-eda-demo-202005-fa9ee67c9ab6a7791435450358e564cc-0000.us-south.containers.appdomain.cloud
     value.converter.schema.registry.property.api.skip_ssl_validation=true
     schema.registry.bootstrap.server=es-cp4i-ibm-es-proxy-route-bootstrap-eventstreams-cp4i.gse-eda-demo-202005-fa9ee67c9ab6a7791435450358e564cc-0000.us-south.containers.appdomain.cloud:443
@@ -184,7 +184,7 @@ connectDistributedProperties: |-
     schema.registry.ssl.truststore.location=/opt/kafka/es-cert.jks
     schema.registry.ssl.truststore.password=password
     schema.registry.sasl.jaas.username=token
-    schema.registry.sasl.jaas.password=40ZcIcdfWlJ003jQKXDka16RaJGjLHrbSL9lubjQWfB3
+    schema.registry.sasl.jaas.password=vwKjy9ABs6oCLhZ71riACyKXYzcuXSjyRF0W1UkEtyCp
     schema.registry.property.api.url=https://es-cp4i-ibm-es-rest-route-eventstreams-cp4i.gse-eda-demo-202005-fa9ee67c9ab6a7791435450358e564cc-0000.us-south.containers.appdomain.cloud
     schema.registry.property.api.skip_ssl_validation=true
     schema.registry.sasl.mechanism=PLAIN
