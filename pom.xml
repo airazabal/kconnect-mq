@@ -4,10 +4,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>ibm.gse.eda</groupId>
-  <artifactId>kconnect-jdbc-sink</artifactId>
+  <artifactId>kconnect-mq</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>kconnect-jdbc-sink</name>
+  <name>kconnect-mq</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -20,8 +20,8 @@
   <dependencies>
     <dependency>
       <groupId>com.ibm.eventstreams.connect</groupId>
-      <artifactId>kafka-connect-jdbc-sink</artifactId>
-      <version>0.0.1</version>
+      <artifactId>kafka-connect-mq-sink</artifactId>
+      <version>1.3.0</version>
       <classifier>jar-with-dependencies</classifier>
       <exclusions>
         <exclusion>
@@ -50,8 +50,8 @@
       <url>http://packages.confluent.io/maven/</url>
     </repository>
     <repository>
-      <id>kafka-connect-jdbc-sink-github</id>
-      <url>https://maven.pkg.github.com/seansund/kafka-connect-jdbc-sink</url>
+      <id>kafka-connect-mq-sink-github</id>
+      <url>https://maven.pkg.github.com/airazabal/kafka-connect-mq-sink</url>
       <releases><enabled>true</enabled></releases>
       <snapshots><enabled>true</enabled></snapshots>
     </repository>
