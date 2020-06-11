@@ -50,7 +50,7 @@
       <url>http://packages.confluent.io/maven/</url>
     </repository>
     <repository>
-      <id>kafka-connect-mq-sink-github</id>
+      <id>kafka-connect-sink-github</id>
       <url>https://maven.pkg.github.com/airazabal/kafka-connect-mq-sink</url>
       <releases><enabled>true</enabled></releases>
       <snapshots><enabled>true</enabled></snapshots>

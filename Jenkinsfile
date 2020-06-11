@@ -211,8 +211,7 @@ spec:
             checkout scm
                 stage('setup') {
                     sh '''
-                       cat settings.xml | sed  -e "s/GIT_USER/$GIT_AUTH_USER/g" -e "s/GIT_TOKEN/$GIT_AUTH_PWD/g" > ./settings.auth.xml
-                       cp ./settings.auth.xml ./settings.xml
+                       cat settings-template.xml | sed  -e "s/GIT_USER/$GIT_AUTH_USER/g" -e "s/GIT_TOKEN/$GIT_AUTH_PWD/g" > ./settings.xml
                        cat ./settings.xml
                     '''
                 }

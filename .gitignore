@@ -3,3 +3,4 @@
 target/
 kconnect-jdbc-sink.iml
 connectors/
+settings.xml
